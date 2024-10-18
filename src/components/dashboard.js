@@ -5,11 +5,25 @@ function Dashboard() {
     useEffect(() => {
         ReactGA.pageview("Dashboard");
     },[]);
+
+    const click = () => {
+        alert("here");
+        ReactGA.event({
+            category: "click",
+            action: "clickAction",
+            label: "user Clicked on button",
+            value: 1234
+        });
+
+    };
     return (
-      <div >
+      <div>
        <p>Dashboard</p>
+       <button onClick={click} type="submit">
+            Click Me
+       </button>
       </div>
     );
-  }
+  };
   
   export default Dashboard;
