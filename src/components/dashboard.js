@@ -1,18 +1,17 @@
-import { useEffect } from "react";
+
 import ReactGA from 'react-ga';
 
 function Dashboard() {
-    useEffect(() => {
-        ReactGA.pageview("Dashboard");
-    },[]);
+    // useEffect(() => {
+    //     ReactGA.pageview("Dashboard");
+    // },[]);
 
     const click = () => {
         alert("here");
         ReactGA.event({
             category: "click",
             action: "clickAction",
-            label: "user Clicked on button",
-            value: 1234
+            label: "user Clicked on button"
         });
 
     };
