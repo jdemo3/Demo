@@ -3,9 +3,9 @@ import { useEffect } from "react";
 import ReactGA from 'react-ga';
 
 const Layout = () => {
-    useEffect(() => {
-        ReactGA.pageview("Layout");
-    },[]);
+    // useEffect(() => {
+    //     ReactGA.pageview("Layout");
+    // },[]);
   return (
     <>
       <nav>
