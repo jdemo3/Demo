@@ -1,29 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
 import ReactGA from 'react-ga';
 import Dashboard from './components/dashboard';
+import Layout from './components/layout';
+import Blogs from './components/blogs';
+import Contact from './components/contact';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const TRACKING_ID = 'G-B15LSRRCQ1';
+const TRACKING_ID = "G-B15LSRRCQ1";
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        <Dashboard></Dashboard>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
   );
 }
 
