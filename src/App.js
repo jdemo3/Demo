@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import ReactGA from 'react-ga';
+import Dashboard from './components/dashboard';
+
+const TRACKING_ID = 'G-B15LSRRCQ1';
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
   return (
@@ -7,7 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <Dashboard></Dashboard>
         </p>
         <a
           className="App-link"
