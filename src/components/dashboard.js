@@ -16,16 +16,6 @@ import { useEffect } from "react";
     return (
         <div>
         <p>Dashboard</p>
-        <p>Dashboard</p>
-        <p>Dashboard</p>
-        <p>Dashboard</p>
-        <p>Dashboard</p>     
-        <p>Dashboard</p>
-        <p>Dashboard</p>
-        <p>Dashboard</p>
-        <p>Dashboard</p>
-        <p>Dashboard</p>
-        <p>Dashboard</p>
        </div>
     );
   };
